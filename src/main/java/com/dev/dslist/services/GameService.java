@@ -1,6 +1,7 @@
 package com.dev.dslist.services;
 
 import com.dev.dslist.dto.GameDto;
+import com.dev.dslist.dto.GameListDto;
 import com.dev.dslist.dto.GameMinDto;
 import com.dev.dslist.entities.Game;
 import com.dev.dslist.entities.GameList;
