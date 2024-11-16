@@ -31,4 +31,13 @@ public class GameService {
         var gameDto = new GameDto(game); // transforma o game em game dto
         return gameDto;
     }
+
+    @Transactional(readOnly = true)
+    public List<GameMinDto> finfByList(Long listId){
+        var games = gameRepository.searchByList(listId);
+        var gamesDto = games.stream().map(g -> new GameMinDto(g)).toList();
+        return gamesDto;
+
+    }
+
 }
